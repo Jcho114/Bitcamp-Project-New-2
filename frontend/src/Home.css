@@ -1,0 +1,109 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-stat;
+    align-items: center;
+    position: absolute;
+    top: 10vh;
+    width: 100vw;
+    height: 134vh;
+    z-index: -1;
+    background-color: #F0EDE3;
+}
+
+.home-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 42vh;
+    background-color: #3D819C;
+}
+
+.home-intro-left {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    color: white;
+}
+
+.home-intro-right img {
+    width: 30vw;
+}
+
+#home-title {
+    padding-left: 10px;
+    margin: 0;
+    font-size: 40px;
+}
+
+#home-description {
+    padding-left: 10px;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.technologies {
+    padding-top: 25px;
+    padding-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#technologies-title {
+    font-size: 40px;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.row {
+    display: flex;
+    width: 70vw;
+}
+
+.cell {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 25vw;
+    height: 25vh;
+}
+
+#react {
+    width: 10vw;
+}
+
+#leaflet {
+    width: 10vw;
+}
+
+#pytorch {
+    width: 10vw;
+}
+
+#expressjs {
+    width: 14vw;
+}
+
+.cell-name {
+    margin: 0;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 44vh;
+    background-color: #4a4e69;
+    color: white;
+}
+
+.github img {
+    padding-left: 50px;
+    width: 10vw;
+    filter: invert(100%);
+}

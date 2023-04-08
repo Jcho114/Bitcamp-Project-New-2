@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Source+Sans+Pro:wght@600&display=swap');
+
+.nav-bar {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100vw;
+    background-color: #8C2F39;
+}
+
+#right-side {
+    display: flex;
+}
+
+#logo {
+    align-self: center;
+    padding-left: 25px;
+}
+
+#logo img {
+    width: 50px;
+    filter: invert(100%);
+}
+
+#project-name {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-left: 25px;
+    color: white;
+    font-size: 25px;
+}
+
+.links {
+    display: flex;
+    align-self: center;
+    padding-right: 20px;
+}
+
+.link {
+    padding: 12px;
+}
+
+.link img {
+    width: 38px;
+    filter: invert(100%);
+}

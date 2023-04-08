@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Source+Sans+Pro:wght@600&display=swap');
+
+@keyframes slideInAndFadeInFromLeft {
+    0% {
+        opacity: 0%;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+
+.side-bar {
+    animation: 0.75s ease-out 0s 1 slideInAndFadeInFromLeft;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    background-color: #e9c46a;
+}
+
+.option {
+    background-color: #e9c46a;
+    transition: background-color 0.5s;
+    width: 100%;
+}
+
+.option:hover {
+    background-color: #c7a85b;
+}
+
+.option-title {
+    font-family: 'Heebo', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 5px;
+}
