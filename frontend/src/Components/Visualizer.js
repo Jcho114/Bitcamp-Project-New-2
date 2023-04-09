@@ -21,7 +21,32 @@ const Visualizer = () => {
             latitude: 52.505, 
             longitude: -0.09, 
             message: 'This is the second message.'
-        }
+        }, 
+        {
+            zipcode: 90001,
+            latitude: 52.505, 
+            longitude: -0.09, 
+            message: 'This is the second message.'
+        }, 
+        {
+            zipcode: 90001,
+            latitude: 52.505, 
+            longitude: -0.09, 
+            message: 'This is the second message.'
+        }, 
+        {
+            zipcode: 90001,
+            latitude: 52.505, 
+            longitude: -0.09, 
+            message: 'This is the second message.'
+        }, 
+        {
+            zipcode: 90001,
+            latitude: 52.505, 
+            longitude: -0.09, 
+            message: 'This is the second message.'
+        }, 
+        
     ]
 
    return (
