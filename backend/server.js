@@ -1,18 +1,10 @@
-import { MongoClient } from 'mongodb';
+import { MongoClient } from "mongodb";
 import { createRequire } from 'module';
 import cors from 'cors';
 
 const require = createRequire(import.meta.url);
 
 const connectionString = "mongodb+srv://jcho114:p9HjoUIOJRd7sD4F@joseph.rf512wj.mongodb.net/?retryWrites=true&w=majority";
-
-const express = require("express");
-
-const PORT = 3001;
-
-const app = express();
-app.use(cors());
-app.use(express.json());
 
 const client = new MongoClient(connectionString);
 
@@ -23,27 +15,32 @@ try {
     console.error(e);
 }
 
-const yeardb = conn.db("test");
+const db = conn.db("test");
+
+const express = require("express");
+
+const PORT = 3001;
+
+const app = express();
+app.use(cors());
+
+app.use(express.json());
 
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 });
 
 app.get("/api", (req, res) => {
-    let count = 0;
-    let jsonList = [];
-    let year = req.query.year;
-    
-    const zipcode = yeardb.collection('homevalues').findOne(
-        {
-            Year: 2011,
-            Zipcode: 89061
-        }
-    );
+    res.json({ "message": "Hello from server!" });
+});
 
-    console.log(JSON.stringify(zipcode));
+app.post('/demo', async (req, res) => {
+    const houseValue = await db.getCollection('homevalues').findOne({
+        Year: req.body.Year,
+        Zipcode: req.body.Zipcode
+    });
 
-    res.json({ "Home Value": zipcode });
+    res.send(houseValue["House Value"]);
 });
 
 app.post('/signin', async (req, res) => {
@@ -59,7 +56,7 @@ app.post('/signin', async (req, res) => {
 
     // Check if the username and password are valid
     //FIND THE USER IN THE DATABASE
-    const user = yeardb.collection('logins').findOne({
+    const user = await db.getCollection('logins').findOne({
         username: req.body.username
     });
 

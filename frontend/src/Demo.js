@@ -32,6 +32,7 @@ const windows = [<FirstWindow />, <SecondWindow />, <ThirdWindow />];
 const Demo = () => {
     const { loggedIn } = useContext(UserContext);
     const { demoWindow } = useContext(UserContext);
+    const [backendData, setBackendData] = useState([{}]);
 
     return (
         <div className='demo'>
