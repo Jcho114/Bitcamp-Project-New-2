@@ -85,6 +85,3 @@ app.post('/signin', async (req, res) => {
     // Send the token back to the client
     res.send(200, token);
 });
-
-//!THINGS TO INSTALL
-//! fix express install, mongodb, jwt
