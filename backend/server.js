@@ -1,5 +1,10 @@
+import path from "path";
+import fs from "fs";
+
 import { MongoClient } from "mongodb";
 import { createRequire } from 'module';
+
+import App from "../frontend/src/App.js";
 
 
 const require = createRequire(import.meta.url);
@@ -23,6 +28,21 @@ const PORT = 3000;
 
 const app = express();
 
+app.get('/', function(req, res) {
+    fs.readFile(path.resolve("../frontend/public/index.html"), "utf8", (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).send("An error occurred");
+        }
+
+        return res.send(
+            data.replace(
+                '<div id="root"></div>',
+                `<div id="root">${ReactDOMServer.renderToString(<App />)}</div>`
+            )
+        );
+    });
+});
 
 app.use(express.json());
 
