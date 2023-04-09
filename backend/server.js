@@ -1,6 +1,3 @@
-// Load environment variables
-import "./loadEnvironment.mjs";
-
 import { MongoClient } from "mongodb";
 
 const connectionString = "mongodb+srv://login:costar@login.k6hzu29.mongodb.net/test";
