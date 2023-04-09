@@ -5,16 +5,7 @@
     height: 90vh;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-.title-segment {
-    font-size: 40px;
-    font-weight: 500;
-}
-
-.buffer {
-    height: 40px;
 }
