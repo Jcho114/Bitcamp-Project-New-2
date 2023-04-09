@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React, { useState } from 'react';
 
 const Slider = () => {
@@ -10,3 +11,16 @@ const Visualizer = () => {
 }
 
 export default Visualizer;
+=======
+import React from 'react'
+
+const Visualizer = () => {
+  return (
+    <div>
+        Visualizer
+    </div>
+  )
+}
+
+export default Visualizer
+>>>>>>> Stashed changes
