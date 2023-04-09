@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useLeaflet, MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import 'leaflet/dist/leaflet.css'
+import 'leaflet/dist/leaflet.css';
 
-import markerIconPng from "leaflet/dist/images/marker-icon.png"
-import {Icon} from 'leaflet'
+import markerIconPng from "leaflet/dist/images/marker-icon.png";
+import {Icon} from 'leaflet';
 
-import './Visualizer.css'
-
+import './Visualizer.css';
 
 const Visualizer = () => {
     const position = [36.7783, -119.4179];
