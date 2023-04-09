@@ -1,6 +1,9 @@
 import { MongoClient } from "mongodb";
+import { createRequire } from 'module';
 
-// Add
+
+const require = createRequire(import.meta.url);
+
 const connectionString = "mongodb+srv://jcho114:p9HjoUIOJRd7sD4F@joseph.rf512wj.mongodb.net/?retryWrites=true&w=majority";
 
 const client = new MongoClient(connectionString);
@@ -12,30 +15,33 @@ try {
     console.error(e);
 }
 
-const logindb = conn.db("Joseph");
-const mapdb = conn.db("Joseph");
-
+const db = conn.db("test");
 
 const express = require("express");
 
-const PORT = 5000;
+const PORT = 3000;
 
 const app = express();
 
 
 app.use(express.json());
 
-
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 });
 
-
 app.get("/api", (req, res) => {
-    res.json({ message: "Hello from server!" });
+    res.json({ "message": "Hello from server!" });
 });
 
+app.post('/demo', async (req, res) => {
+    const houseValue = await db.getCollection('homevalues').findOne({
+        Year: req.body.Year,
+        Zipcode: req.body.Zipcode
+    });
 
+    res.send(houseValue["House Value"]);
+});
 
 app.post('/signin', async (req, res) => {
     // Check if the user has provided a username and password
@@ -50,7 +56,7 @@ app.post('/signin', async (req, res) => {
 
     // Check if the username and password are valid
     //FIND THE USER IN THE DATABASE
-    const user = await logindb.getCollection('logins').findOne({
+    const user = await db.getCollection('logins').findOne({
         username: req.body.username
     });
 
@@ -78,10 +84,6 @@ app.post('/signin', async (req, res) => {
 
     // Send the token back to the client
     res.send(200, token);
-});
-
-app.post('/demo', (req, req) => {
-
 });
 
 //!THINGS TO INSTALL
