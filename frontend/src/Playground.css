@@ -5,7 +5,16 @@
     height: 90vh;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.title-segment {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.buffer {
+    height: 40px;
 }

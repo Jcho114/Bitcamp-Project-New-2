@@ -1,21 +1,37 @@
-import React, { useState, useEffect } from "react";
-import { useLeaflet, MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import 'leaflet/dist/leaflet.css'
-import Visualizer from './Components/Visualizer'
+import React, { useState } from "react";
+import Slider from "@mui/material/Slider";
 import './Playground.css'
-
-const PlayGround = () => {
-    const position = [119.4179, 119.4179];
-
-	return (
-
-		<div className = "playground-main">
-			<Visualizer/>
-		</div>
+import Visualizer from './Components/Visualizer'
 
 
+const Playground = () => {
+   const [value, setValue] = useState();
+   function handleRangeSlider(value) {
+      setValue(value);
+   }
+   return (
+      <div className = "playground-main">
 
-    );
-}
+		<p className = "title-segment"> Predicted / Historical California Housing Prices for {value}. </p>
 
-export default PlayGround;
+         <Visualizer value = {value} />
+
+		 <div className = "buffer"></div>
+
+         <div style = {{ width: "600px" }}>
+            <Slider
+               aria-label = "discrete slider."
+               defaultValue = {2020}
+               getAriaValueText = {handleRangeSlider}
+               valueLabelDisplay = "auto"
+               step = {1}
+               marks
+               min = {2011}
+               max = {2031}
+            />
+         </div>
+         
+      </div>
+   );
+};
+export default Playground;
