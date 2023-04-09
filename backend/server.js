@@ -1,6 +1,7 @@
 import { MongoClient } from "mongodb";
 
-const connectionString = "";
+// Add
+const connectionString = "mongodb+srv://jcho114:p9HjoUIOJRd7sD4F@joseph.rf512wj.mongodb.net/?retryWrites=true&w=majority";
 
 const client = new MongoClient(connectionString);
 
@@ -11,7 +12,8 @@ try {
     console.error(e);
 }
 
-const logindb = conn.db("login");
+const logindb = conn.db("Joseph");
+const mapdb = conn.db("Joseph");
 
 
 const express = require("express");
@@ -44,6 +46,8 @@ app.post('/signin', async (req, res) => {
     return;
     }
 
+    
+
     // Check if the username and password are valid
     //FIND THE USER IN THE DATABASE
     const user = await logindb.getCollection('logins').findOne({
@@ -74,6 +78,10 @@ app.post('/signin', async (req, res) => {
 
     // Send the token back to the client
     res.send(200, token);
+});
+
+app.post('/demo', (req, req) => {
+
 });
 
 //!THINGS TO INSTALL
