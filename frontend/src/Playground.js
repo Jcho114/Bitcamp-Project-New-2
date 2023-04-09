@@ -5,7 +5,7 @@ import Visualizer from './Components/Visualizer'
 import './Playground.css'
 
 const PlayGround = () => {
-    const position = [36.77, 119.4];
+    const position = [119.4179, 119.4179];
 
 	return (
 

@@ -5,9 +5,11 @@ import 'leaflet/dist/leaflet.css'
 import markerIconPng from "leaflet/dist/images/marker-icon.png"
 import {Icon} from 'leaflet'
 
+import './Visualizer.css'
+
 
 const Visualizer = () => {
-    const position = [51, -0.09];
+    const position = [36.7783, -119.4179];
     
     const data = [
         {
@@ -53,7 +55,7 @@ const Visualizer = () => {
 
        <div>
         
-        <MapContainer center = {position} zoom={13} scrollWheelZoom={false} style = {{height: 600, width : "50vw"}}>
+        <MapContainer center = {position} zoom={8} scrollWheelZoom={false} className = 'map-overall'>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
