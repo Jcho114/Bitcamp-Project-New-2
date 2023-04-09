@@ -9,6 +9,18 @@ import './Visualizer.css'
 
 
 const Visualizer = () => {
+    const [backendData, setBackendData] = useState([{}]);
+
+    useEffect(() => {
+        fetch("http://localhost:3001/api?year=" + 2011).then(
+            (response) => response.toArray()
+        ).then(
+            data => {
+                setBackendData(data);
+            }
+        ).catch((e) => {console.log(e)});
+    }, []);
+
     const position = [36.7783, -119.4179];
     
     const data = [
@@ -19,31 +31,31 @@ const Visualizer = () => {
             message: 'This is the first message.'
         }, 
         {
-            zipcode: 90001,
+            zipcode: 90002,
             latitude: 52.505, 
             longitude: -0.09, 
             message: 'This is the second message.'
         }, 
         {
-            zipcode: 90001,
+            zipcode: 90003,
             latitude: 52.505, 
             longitude: -0.09, 
             message: 'This is the second message.'
         }, 
         {
-            zipcode: 90001,
+            zipcode: 90004,
             latitude: 52.505, 
             longitude: -0.09, 
             message: 'This is the second message.'
         }, 
         {
-            zipcode: 90001,
+            zipcode: 90005,
             latitude: 52.505, 
             longitude: -0.09, 
             message: 'This is the second message.'
         }, 
         {
-            zipcode: 90001,
+            zipcode: 90006,
             latitude: 52.505, 
             longitude: -0.09, 
             message: 'This is the second message.'
@@ -63,7 +75,7 @@ const Visualizer = () => {
 
 
             {data.map((zip) => (
-                <Marker position={[zip.latitude, zip.longitude]} icon={new Icon({iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]})} >
+                <Marker key={zip.zipcode} position={[zip.latitude, zip.longitude]} icon={new Icon({iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]})} >
                     <Popup>
                         {zip.message}
                     </Popup>
