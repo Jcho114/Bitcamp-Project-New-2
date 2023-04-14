@@ -1,15 +1,9 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import SideBar from './Components/SideBar.js';
+import Playground from './Playground.js';
 import './Demo.css';
 import { UserContext } from './Context/UserContext.js';
-
-const FirstWindow = () => {
-    return (
-        <div>
-            <h1>First Window</h1>
-        </div>
-    );
-}
 
 const SecondWindow = () => {
     return (
@@ -27,7 +21,7 @@ const ThirdWindow = () => {
     );
 }
 
-const windows = [<FirstWindow />, <SecondWindow />, <ThirdWindow />];
+const windows = [<Playground />, <SecondWindow />, <ThirdWindow />];
 
 const Demo = () => {
     const { loggedIn } = useContext(UserContext);
@@ -35,9 +29,16 @@ const Demo = () => {
 
     return (
         <div className='demo'>
-            <SideBar />
-            <h1 id='demo-title'>{loggedIn ? "Hello User" : "Demo"}</h1>
-            {windows[demoWindow]}
+            {loggedIn ? 
+                    <div className='demo'>
+                        <SideBar />
+                        {windows[demoWindow]}
+                    </div>
+                    :
+                    <div id='non-demo-view'>
+                        <h1>You must log in to access the demo!</h1>
+                        <Link id='login-button' to="/login">Log in</Link>
+                    </div>}
         </div>
     );
 }

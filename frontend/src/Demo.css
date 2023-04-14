@@ -6,3 +6,25 @@
     top: 10vh;
     background-color: #F0EDE3;
 }
+
+#non-demo-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    top: 10vh;
+    flex-direction: column;
+}
+
+#login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5vw;
+    height: 4vh;
+    text-decoration: none;
+    color: white;
+    border-radius: 0.5vw;
+    background-color: black;
+}

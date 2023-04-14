@@ -27,24 +27,24 @@ const Playground = () => {
 	}
 
 	return (
-	   <div className = "playground-main">
+	   <div className="playground-main">
  
-		   <p className = "title-segment"> Predicted / Historical California Housing Prices for {value}. </p>
+		   <h2 className="title-segment">California Housing Prices for {value}</h2>
  
 		   <Visualizer data = {data} />
 
-		   <div className = "buffer"></div>
+		   <div className="buffer"></div>
 
-		   <div style = {{ width: "600px" }}>
+		   <div style={{ width: "600px" }}>
                <Slider
-                  aria-label = "discrete slider."
-                  defaultValue = {2020}
-                  getAriaValueText = {handleRangeSlider}
-                  valueLabelDisplay = "auto"
-                  step = {1}
+                  aria-label="discrete slider."
+                  defaultValue={2020}
+                  getAriaValueText={handleRangeSlider}
+                  valueLabelDisplay="auto"
+                  step={1}
                   marks
-                  min = {2011}
-                  max = {2030}
+                  min={2011}
+                  max={2030}
                />
          </div>
 

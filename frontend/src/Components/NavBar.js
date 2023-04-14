@@ -5,7 +5,6 @@ import Logo from '../Assets/logo.png';
 import Login from '../Assets/login.webp';
 import Logout from '../Assets/logout.png';
 import Demo from '../Assets/demo.png';
-import Playground from '../Assets/playground.png';
 import { UserContext } from '../Context/UserContext.js';
 
 const NavBar = () => {
@@ -37,9 +36,6 @@ const NavBar = () => {
             <div className='links'>
                 <Link className='link' to='/demo'>
                     <img src={Demo} alt='Demo'></img>
-                </Link>
-                <Link className='link' to='/playground'>
-                    <img src={Playground} alt='Playground'></img>
                 </Link>
                 {loggedInOrNot()}
             </div>

@@ -5,8 +5,8 @@ import './SideBar.css';
 const SideBar = () => {
     return (
         <div className='side-bar'>
-            <Option name='Name1' window={0} />
-            <Option name='Lorem Ipsum' window={1} />
+            <Option name='Zipcode Selector' window={0} />
+            <Option name='Zipcode Analyzer' window={1} />
             <Option name='Bitcamp stuff' window={2} />
         </div>
     );

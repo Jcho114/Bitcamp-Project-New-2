@@ -1,7 +1,5 @@
 .playground-main {
-    position: absolute;
-    top: 10vh;
-    width: 100vw;
+    width: 80vw;
     height: 90vh;
 
     display: flex;
