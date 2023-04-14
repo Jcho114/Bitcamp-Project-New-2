@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import SideBar from './Components/SideBar.js';
 import './Demo.css';
 import { UserContext } from './Context/UserContext.js';
@@ -32,7 +32,6 @@ const windows = [<FirstWindow />, <SecondWindow />, <ThirdWindow />];
 const Demo = () => {
     const { loggedIn } = useContext(UserContext);
     const { demoWindow } = useContext(UserContext);
-    const [backendData, setBackendData] = useState([{}]);
 
     return (
         <div className='demo'>
