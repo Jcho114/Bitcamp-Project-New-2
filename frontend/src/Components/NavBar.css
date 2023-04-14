@@ -24,7 +24,7 @@
 }
 
 #logo img {
-    width: 50px;
+    width: 3vw;
     filter: invert(100%);
 }
 
@@ -32,7 +32,7 @@
     font-family: 'Source Sans Pro', sans-serif;
     padding-left: 25px;
     color: white;
-    font-size: 25px;
+    font-size: 3vh;
 }
 
 .links {
@@ -46,6 +46,6 @@
 }
 
 .link img {
-    width: 38px;
+    width: 2.2vw;
     filter: invert(100%);
 }
