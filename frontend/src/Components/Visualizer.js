@@ -25,7 +25,9 @@ const Visualizer = ({ data }) => {
                 <Marker key={item.id} position={[item.latitude, item.longitude]} icon={new Icon({iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]})} >
                     {console.log(item.id + " Year: " + item.year + " " + item.house_value)}
                     <Popup>
-                        {item.house_value}
+                        <p>{"Zipcode: " + item.zipcode}</p>
+                        <p>{"Year: " + item.year}</p>
+                        <p>{"House Value: $" + item.house_value}</p>
                     </Popup>
                 </Marker>
             ))}

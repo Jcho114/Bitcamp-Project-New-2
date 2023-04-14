@@ -15,8 +15,8 @@ router.get('/api/data', async (req, res) => {
     }
 });
 
-router.get('/api/year', async (req, res) => {
-    const { year } = req.query.year;
+router.get('/api/data/filterwithyear', async (req, res) => {
+    const year = req.query.year;
     try {
         const [rows] = await pool.query('SELECT * FROM zipcodes WHERE year = ?', [year]);
         res.json(rows);

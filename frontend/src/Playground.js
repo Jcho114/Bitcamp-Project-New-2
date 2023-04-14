@@ -10,7 +10,7 @@ const Playground = () => {
 
    async function fetchData(year) {
       try {
-         const response = await axios.get(`http://localhost:3001/api/data?year=${year}`);
+         const response = await axios.get(`http://localhost:3001/api/data/filterwithyear?year=${year}`);
          const data = await response.data;
          setData(data);
       } catch (error) {
