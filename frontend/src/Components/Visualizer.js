@@ -7,48 +7,8 @@ import {Icon} from 'leaflet';
 
 import './Visualizer.css';
 
-const Visualizer = () => {
+const Visualizer = ({ data }) => {
     const position = [36.7783, -119.4179];
-    
-    const data = [
-        {
-            zipcode: 90000,
-            latitude: 52.605, 
-            longitude: -0.09, 
-            message: 'This is the first message.'
-        }, 
-        {
-            zipcode: 90001,
-            latitude: 52.505, 
-            longitude: -0.09, 
-            message: 'This is the second message.'
-        }, 
-        {
-            zipcode: 90001,
-            latitude: 52.505, 
-            longitude: -0.09, 
-            message: 'This is the second message.'
-        }, 
-        {
-            zipcode: 90001,
-            latitude: 52.505, 
-            longitude: -0.09, 
-            message: 'This is the second message.'
-        }, 
-        {
-            zipcode: 90001,
-            latitude: 52.505, 
-            longitude: -0.09, 
-            message: 'This is the second message.'
-        }, 
-        {
-            zipcode: 90001,
-            latitude: 52.505, 
-            longitude: -0.09, 
-            message: 'This is the second message.'
-        }, 
-        
-    ]
 
    return (
 
@@ -61,10 +21,11 @@ const Visualizer = () => {
                />
 
 
-            {data.map((zip) => (
-                <Marker position={[zip.latitude, zip.longitude]} icon={new Icon({iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]})} >
+            {data.map((item) => (
+                <Marker key={item.id} position={[item.latitude, item.longitude]} icon={new Icon({iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]})} >
+                    {console.log(item.id + " Year: " + item.year + " " + item.house_value)}
                     <Popup>
-                        {zip.message}
+                        {item.house_value}
                     </Popup>
                 </Marker>
             ))}
