@@ -1,3 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-notebooks/** linguist-vendored
+machine-learning/learning.ipynb/** linguist-vendored
+machine-learning/cleaning.ipynb/** linguist-vendored
