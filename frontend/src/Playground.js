@@ -29,7 +29,7 @@ const Playground = () => {
 	return (
 	   <div className="playground-main">
  
-		   <h2 className="title-segment">California Housing Prices for {value}</h2>
+		   <h2 className="title-segment">{value < 2024 ? "California Housing Historical Prices for" : "AI Predicted California Housing Prices"} {value} </h2>
  
 		   <Visualizer data = {data} />
 
