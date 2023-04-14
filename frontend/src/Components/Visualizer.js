@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLeaflet, MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import 'leaflet/dist/leaflet.css';
 
-import markerIconPng from "leaflet/dist/images/marker-icon.png";
+import markerIconPng from '../Assets/house.png';
 import {Icon} from 'leaflet';
 
 import './Visualizer.css';
@@ -14,7 +14,7 @@ const Visualizer = ({ data }) => {
 
        <div>
         
-        <MapContainer center = {position} zoom={8} scrollWheelZoom={false} className = 'map-overall'>
+        <MapContainer center = {position} zoom={8} scrollWheelZoom={false} className='map-overall' preferCanvas={true}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -22,12 +22,13 @@ const Visualizer = ({ data }) => {
 
 
             {data.map((item) => (
-                <Marker key={item.id} position={[item.latitude, item.longitude]} icon={new Icon({iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]})} >
-                    {console.log(item.id + " Year: " + item.year + " " + item.house_value)}
+                <Marker key={item.id} position={[item.latitude, item.longitude]} icon={new Icon({iconUrl: markerIconPng, iconSize: [30, 30], iconAnchor: [15, 5]})} >
                     <Popup>
-                        <p>{"Zipcode: " + item.zipcode}</p>
-                        <p>{"Year: " + item.year}</p>
-                        <p>{"House Value: $" + item.house_value}</p>
+                        <span>
+                            {"Zipcode: " + item.zipcode}<br/>
+                            {"Year: " + item.year}<br/>
+                            {"House Value: $" + item.house_value}<br/>
+                        </span>
                     </Popup>
                 </Marker>
             ))}
