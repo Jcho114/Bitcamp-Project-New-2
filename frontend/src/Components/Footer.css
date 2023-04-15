@@ -3,24 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Source+Sans+Pro:wght@600&display=swap');
 
-@keyframes slideInAndFadeInFromLeft {
-    0% {
-        opacity: 0%;
-        transform: translateX(-100%);
-    }
-    100% {
-        opacity: 100%;
-        transform: translateX(0);
-    }
-}
-
 .side-bar {
-    animation: 0.75s ease-out 0s 1 slideInAndFadeInFromLeft;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 20%;
+    width: 100vw;
+    height: 4vh;
     background-color: #e9c46a;
+    text-align: center;
 }
 
 .option {

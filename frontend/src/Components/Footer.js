@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../Context/UserContext.js';
-import './SideBar.css';
+import './Footer.css';
 
 const SideBar = () => {
     return (

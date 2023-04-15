@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import SideBar from './Components/SideBar.js';
+import Footer from './Components/Footer.js';
 import Playground from './Playground.js';
 import './Demo.css';
 import { UserContext } from './Context/UserContext.js';
 
 const SecondWindow = () => {
     return (
-        <div>
+        <div className="window2">
             <h1>Second Window</h1>
         </div>
     );
@@ -15,7 +15,7 @@ const SecondWindow = () => {
 
 const ThirdWindow = () => {
     return (
-        <div>
+        <div className="window3">
             <h1>Third Window</h1>
         </div>
     );
@@ -30,15 +30,16 @@ const Demo = () => {
     return (
         <div className='demo'>
             {loggedIn ? 
-                    <div className='demo'>
-                        <SideBar />
-                        {windows[demoWindow]}
-                    </div>
+                <div className='demo'>
+                    {windows[demoWindow]}
+                    <Footer />
+                </div>
                     :
-                    <div id='non-demo-view'>
-                        <h1>You must log in to access the demo!</h1>
-                        <Link id='login-button' to="/login">Log in</Link>
-                    </div>}
+                <div id='non-demo-view'>
+                    <h1>You must log in to access the demo!</h1>
+                    <Link id='login-button' to="/login">Log in</Link>
+                </div>
+            }
         </div>
     );
 }

@@ -1,10 +1,21 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
 .demo {
+    animation: 0.5s ease-out 0s 1 fadeIn;
     display: flex;
     height: 93vh;
     width: 100vw;
     position: fixed;
     top: 7vh;
     background-color: #F0EDE3;
+    flex-direction: column;
 }
 
 #non-demo-view {
@@ -27,4 +38,20 @@
     color: white;
     border-radius: 0.5vw;
     background-color: black;
+}
+
+.window2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 89vh;
+}
+
+.window3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 89vh;
 }

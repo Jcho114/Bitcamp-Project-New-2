@@ -1,7 +1,16 @@
-.playground-main {
-    width: 80vw;
-    height: 90vh;
+@keyframes fadeIn {
+    0%, 75% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
 
+.playground-main {
+    animation: 3s ease-in 0s 1 fadeIn;
+    width: 100vw;
+    height: 89vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
