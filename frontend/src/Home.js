@@ -33,7 +33,7 @@ const Home = () => {
 
             <div className='github'>
                 <h1>Github Repository</h1>
-                <a href='https://github.com/Jcho114/Bitcamp-Project-New'><img src={GithubLogo} alt='Github'></img></a>
+                <a href='https://github.com/Jcho114/Bitcamp-Project-New' target="_blank" rel="noopener noreferrer"><img src={GithubLogo} alt='Github'></img></a>
             </div>
 
         </div>

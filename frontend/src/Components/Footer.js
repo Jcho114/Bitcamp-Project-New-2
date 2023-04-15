@@ -5,7 +5,7 @@ import './Footer.css';
 const SideBar = () => {
     return (
         <div className='side-bar'>
-            <Option name='Zipcode Selector' window={0} />
+            <Option name='Zipcode Visualizer' window={0} />
             <Option name='Zipcode Analyzer' window={1} />
             <Option name='Bitcamp stuff' window={2} />
         </div>

@@ -23,13 +23,13 @@ const Visualizer = ({ data }) => {
 
             {data.map((item) => (
                 <Marker key={item.id} position={[item.latitude, item.longitude]} icon={new Icon({iconUrl: markerIconPng, iconSize: [30, 30], iconAnchor: [15, 5]})} >
-                    {console.log(item.latitude + "/" + item.longitude)}
                     <Popup>
                         <span>
                             {"Zipcode: " + item.zipcode}<br/>
                             {"Year: " + item.year}<br/>
                             {"House Value: $" + Math.round(item.house_value * 100) / 100}
                             <MarkerButton />
+                            <a href={'https://www.zillow.com/homes/' + item.zipcode + '_rb/'} target="_blank" rel="noopener noreferrer">Zillow</a>
                         </span>
                     </Popup>
                 </Marker>
