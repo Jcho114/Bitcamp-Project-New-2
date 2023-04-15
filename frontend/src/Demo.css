@@ -1,9 +1,9 @@
 .demo {
     display: flex;
-    height: 90vh;
+    height: 93vh;
     width: 100vw;
     position: fixed;
-    top: 10vh;
+    top: 7vh;
     background-color: #F0EDE3;
 }
 
@@ -12,8 +12,8 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 90vh;
-    top: 10vh;
+    height: 93vh;
+    top: 7vh;
     flex-direction: column;
 }
 

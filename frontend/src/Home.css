@@ -25,9 +25,9 @@
     justify-content: flex-stat;
     align-items: center;
     position: absolute;
-    top: 10vh;
+    top: 7vh;
     width: 100vw;
-    height: 180vh;
+    height: 93*2vh;
     z-index: -1;
     background-color: #F0EDE3;
 }
@@ -37,7 +37,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 90vh;
+    height: 93vh;
     background-color: #3D819C;
 }
 
@@ -96,7 +96,7 @@
     justify-content: center;
     text-align: center;
     width: 25vw;
-    height: 25vh;
+    height: 27vh;
 }
 
 .cell img {
@@ -132,7 +132,7 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 38vh;
+    height: 40vh;
     background-color: #4a4e69;
     color: white;
 }
