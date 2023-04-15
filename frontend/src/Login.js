@@ -54,11 +54,11 @@ const Login = () => {
 
               <form className = "sign-up-form" onSubmit={(event) => navigateToDemo(event)}>
 
-                <label className = "input-label" for="username">Username</label>
+                <label className = "input-label" htmlFor="username">Username</label>
                 <input className = "input-field" type="text" id="username" onChange={(e) => changeName(e)} 
                 placeholder="Enter username"/>
 
-                <label className = "input-label" for="password">Password</label>
+                <label className = "input-label" htmlFor="password">Password</label>
                 <input className = "input-field" type="password" id="password" onChange={(e) => changePassword(e)}
                 placeholder = "Enter password"/>
 

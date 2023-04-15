@@ -5,6 +5,7 @@ import markerIconPng from '../Assets/house.png';
 import {Icon} from 'leaflet';
 
 import './Visualizer.css';
+import MarkerButton from "./MarkerButton";
 
 const Visualizer = ({ data }) => {
     const position = [36.7783, -119.4179];
@@ -28,6 +29,7 @@ const Visualizer = ({ data }) => {
                             {"Zipcode: " + item.zipcode}<br/>
                             {"Year: " + item.year}<br/>
                             {"House Value: $" + Math.round(item.house_value * 100) / 100}
+                            <MarkerButton />
                         </span>
                     </Popup>
                 </Marker>

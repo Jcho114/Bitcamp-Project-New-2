@@ -5,7 +5,7 @@ import Visualizer from './Components/Visualizer'
 import './Playground.css'
 
 const Playground = () => {
-	const [value, setValue] = useState(2020);
+   const [value, setValue] = useState(2020);
    const [data, setData] = useState([]);
 
    async function fetchData(year) {
