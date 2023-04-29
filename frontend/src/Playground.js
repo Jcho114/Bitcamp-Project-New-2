@@ -38,7 +38,7 @@ const Playground = () => {
 		   <div style={{ width: "600px" }}>
                <Slider
                   aria-label="discrete slider."
-                  defaultValue={2020}
+                  defaultValue={2023}
                   getAriaValueText={handleRangeSlider}
                   valueLabelDisplay="auto"
                   step={1}

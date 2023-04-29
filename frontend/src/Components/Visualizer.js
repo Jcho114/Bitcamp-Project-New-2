@@ -27,7 +27,7 @@ const Visualizer = ({ data }) => {
                         <span>
                             {"Zipcode: " + item.zipcode}<br/>
                             {"Year: " + item.year}<br/>
-                            {"House Value: $" + Math.round(item.house_value * 100) / 100}
+                            {"Median House Value: $" + Math.round(item.house_value)}
                             <MarkerButton />
                             <a href={'https://www.zillow.com/homes/' + item.zipcode + '_rb/'} target="_blank" rel="noopener noreferrer">Zillow</a>
                         </span>
