@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Start react client
-CMD ["npm", "run", "dev"]
+CMD ["npm", "start"]
